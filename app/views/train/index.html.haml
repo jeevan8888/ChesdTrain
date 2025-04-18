@@ -1,0 +1,8 @@
+.container.p-10
+  .flex.flex-col.items-center.justify-center.border.border-primary.rounded-lg.lg:p-10.p-5.w-full
+    %div{ class: "text-secondary lg:text-[2rem] text-[1rem] font-lato font-[700] text-center lg:mb-20 mb-5"} Would You Like To Start a Chesed Train or Potluck?
+    = link_to train_c_step1_path, class: "bg-primary-original text-white w-1/2 lg:py-5 py-2 rounded-[0.7rem] cursor-pointer border border-secondary flex items-center justify-center mb-5" do
+      %span{ class: "lg:text-[1.5rem] text-[0.7rem] text-center"} CHESED TRAIN
+    = link_to train_p_step1_path, class: "bg-primary-original text-white w-1/2 lg:py-5 py-2 rounded-[0.7rem] cursor-pointer border border-secondary flex items-center justify-center mb-5" do
+      %span{ class: "lg:text-[1.5rem] text-[0.7rem] text-center"} POTLUCK
+

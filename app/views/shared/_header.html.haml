@@ -1,0 +1,36 @@
+%div{ class: "lg:bg-primary text-white w-full transition-all duration-300  font-alice lg:h-[100px] h-[90px]" }
+  .lg:flex.lg:flex-row.items-center.justify-between.hidden.pr-12 
+    .logo.cursor-pointer.z-10
+      = link_to root_path do
+        = image_tag "/imgs/logo_h.png", class: "h-[100px] cursor-pointer z-10", alt: "Header Logo"
+    %div{ class: "text-secondary xl:text-[3rem] text-[2rem] text-center absolute left-0 right-0 mx-auto"} CHESED TRAIN
+    .flex.flex-row.items-center.justify-center.space-x-4
+      = link_to signIn_path, class: "bg-transparent text-secondary xl:w-[9.45rem] w-[7rem] text-[0.7rem] text-center py-2 rounded-[0.7rem] cursor-pointer border border-secondary z-[100] inline-block" do
+        Sign In
+      = link_to train_path, class: "bg-primary-original text-white xl:w-[11.5rem] w-[9rem] text-[0.7rem] text-center py-2 rounded-[0.7rem] cursor-pointer border border-secondary z-[100]" do
+        Start a Chesed Train
+      %span{ class: "text-secondary text-[0.9rem]"} ב״ה
+  .lg:hidden.flex.flex-row.items-center.justify-between
+    .flex.flex-row.items-center.justify-center
+      %span{ class: "text-secondary text-[1rem] w-[90px] text-center"} ב״ה
+    .logo.cursor-pointer.z-10
+      = link_to root_path do
+        = image_tag "/imgs/logo_h.png", class: "h-[90px]", alt: "Header Logo"
+    %button.relative#mobile-menu-button{onclick: "toggleMenu()", class: "h-[90px] flex items-center"}
+      = image_tag "/icons/menu.svg", class: "h-[90px]", alt: "Menu", id: "menu-icon"
+    #mobile-menu{class: "hidden absolute top-[90px] right-0 w-full bg-white shadow-xl z-50"}
+      .flex.flex-col.items-center.py-4.space-y-4
+        = link_to "Homepage", root_path, class: "text-secondary font-lato font_large items-center justify-center flex h-[3rem] w-[17.5rem] text-center hover:bg-[rgba(63,114,175,0.2)] hover:text-gray-900"
+        = link_to "Login", "/signIn", class: "text-secondary font-lato font_large items-center justify-center flex h-[3rem] w-[17.5rem] text-center hover:bg-[rgba(63,114,175,0.2)] hover:text-gray-900"
+        = link_to "Start A Chesed Train", "/train", class: "text-secondary font-lato font_large items-center justify-center flex h-[3rem] w-[17.5rem] text-center hover:bg-[rgba(63,114,175,0.2)] hover:text-gray-900"
+    :javascript
+      function toggleMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        menu.classList.toggle('hidden');
+        if (menu.classList.contains('hidden')) {
+          menuIcon.src = '/icons/menu.svg';
+        } else {
+          menuIcon.src = '/icons/menu_close.svg';
+        }
+      }
