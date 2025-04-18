@@ -2,7 +2,7 @@
   .flex.flex-col.items-center.justify-center.border.border-primary.rounded-lg.lg:p-10.p-5.w-full.relative
     %div{ class: "text-secondary lg:text-[2rem] text-[1rem] font-lato font-[700] mb-5"} Create Your Account
 
-    = form_with(url: '#', class: 'lg:space-y-4 space-y-2 lg:w-1/2 w-full') do |f|
+    = form_with(url: register_path, method: :post, class: 'lg:space-y-4 space-y-2 lg:w-1/2 w-full') do |f|
       .flex.flex-row.space-x-2
         %div{ class: "form-group w-1/2" }
           = f.label :firstName, "First Name", class: 'block lg:text-[1.1rem] text-[0.7rem] font-bold text-secondary mb-1'
