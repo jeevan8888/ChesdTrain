@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   root "home#index"
 
   get "signIn" => "auth#signIn", as: :signIn
+  post "signIn" => "auth#authenticate", as: :authenticate
   get "signUp" => "auth#signUp", as: :signUp
+  post "signUp" => "auth#register", as: :register
 
   get "train" => "train#index", as: :train
   # namespace :train do
