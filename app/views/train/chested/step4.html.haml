@@ -7,44 +7,44 @@
         %div{ class: "flex flex-col w-1/2" }
           = f.label :adult, "Adult", class: 'block lg:text-[1.1rem] text-[0.7rem] font-bold text-secondary mb-1'
           .flex.flex-row.space-x-2.items-center
-            = f.text_field :adult, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500'
+            = f.text_field :adult, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500', value: session[:adult]
             %button{ class: "bg-transparent border border-secondary text-secondary w-[2rem] h-[2rem] text-center rounded-lg cursor-pointer"} -
             %button{ class: "bg-transparent border border-secondary text-secondary w-[2rem] h-[2rem] text-center rounded-lg cursor-pointer"} +
 
         %div{ class: "flex flex-col w-1/2" }
           = f.label :kids, "Kids", class: 'block lg:text-[1.1rem] text-[0.7rem] font-bold text-secondary mb-1'
           .flex.flex-row.space-x-2.items-center
-            = f.text_field :kids, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500'
+            = f.text_field :kids, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500', value: session[:kids]
             %button{ class: "bg-transparent border border-secondary text-secondary w-[2rem] h-[2rem] text-center rounded-lg cursor-pointer"} -
             %button{ class: "bg-transparent border border-secondary text-secondary w-[2rem] h-[2rem] text-center rounded-lg cursor-pointer"} +
 
       .form-group
         = f.label :question1, "Are there any allergies? ", class: 'block lg:text-[1.1rem] text-[0.7rem] font-bold text-secondary mb-1'
-        = f.text_field :question1, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500'
+        = f.text_field :question1, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500', value: session[:question1]
       
       .form-group
         = f.label :question2, "What is the recipients favorites restaurant? ", class: 'block lg:text-[1.1rem] text-[0.7rem] font-bold text-secondary mb-1'
-        = f.text_field :question2, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500'
+        = f.text_field :question2, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500', value: session[:question2]
 
       .form-group
         = f.label :question3, "What is the recipients least favorite food? ", class: 'block lg:text-[1.1rem] text-[0.7rem] font-bold text-secondary mb-1'
-        = f.text_field :question3, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500'
+        = f.text_field :question3, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500', value: session[:question3]
       
       .form-group
         = f.label :question4, "Preferred Delivery Time", class: 'block lg:text-[1.1rem] text-[0.7rem] font-bold text-secondary mb-1'
-        = f.text_field :question4, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500'
+        = f.text_field :question4, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500', value: session[:question4]
 
       .form-group
         = f.label :question5, "Are there any dietary restrictions?", class: 'block lg:text-[1.1rem] text-[0.7rem] font-bold text-secondary mb-1'
-        = f.text_field :question5, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500'
+        = f.text_field :question5, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500', value: session[:question5]
 
       .form-group
         = f.label :question6, "Is there a special message you would like to share?", class: 'block lg:text-[1.1rem] text-[0.7rem] font-bold text-secondary mb-1'
-        = f.text_area :question6, rows: 5, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500'
+        = f.text_area :question6, rows: 5, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500', value: session[:question6]
 
       .form-group
         = f.label :question7, "Are there any specific preferences for your Shabbos meals?", class: 'block lg:text-[1.1rem] text-[0.7rem] font-bold text-secondary mb-1'
-        = f.text_area :question7, rows: 5, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500'
+        = f.text_area :question7, rows: 5, class: 'bg-transparent w-full lg:px-3 px-2 lg:py-2 py-1 border border-secondary rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500', value: session[:question7]
 
       <br><br>
       .mt-10.flex.justify-center.lg:space-x-2.space-y-5.items-center.lg:flex-row.flex-col
